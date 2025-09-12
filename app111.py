@@ -1,13 +1,14 @@
 import streamlit as st
-import numpy as np
 
-st.title("Gatitos - Edades")
+st.title("Edad de tu gato")
 
-edades = st.text_input("Ingresa edades de gatos separadas por comas:", "2,4,7")
+edad = st.slider("Selecciona la edad de tu gato (años)", 0, 25, step=1)
 
-if edades:
-    lista = [int(x) for x in edades.split(",") if x.strip().isdigit()]
-    if lista:
-        st.write("Edad mínima:", min(lista))
-        st.write("Edad máxima:", max(lista))
-        st.write("Edad promedio:", round(np.mean(lista),2))
+if edad <= 2:
+    etapa = "🐾 Bebé gato"
+elif edad <= 10:
+    etapa = "🐱 Gato adulto"
+else:
+    etapa = "🧓 Gato viejo"
+
+st.write(f"La edad seleccionada es {edad} años, y tu gato es un: {etapa}")
