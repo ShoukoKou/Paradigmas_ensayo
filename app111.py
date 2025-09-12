@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import numoy as np
+import numpy as np
 
 st.tittle("Gatitos")
 num = st.slider("num", 0, 100, step = 1)
