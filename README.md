@@ -1,2 +1,2 @@
 # Paradigmas_ensayo
-.\ semana 4 finalizada
+.\ week 4, completed
